@@ -36,7 +36,6 @@ router.put('/:PatientId/AddFiles', IsLoggedIn, upload.array('Images'), catchAsyn
     const { PatientId } = req.params;
     const Patient = await PatientSchema.findById(PatientId).populate('Doctor').populate('Images');
     const imgs = req.files.map(f => ({ Url: f.path, FileName: f.filename }));
-    console.log(imgs);
     Patient.Documents.push(...imgs);
     await Patient.save();
     res.render('Patients/Patient', { Patient })

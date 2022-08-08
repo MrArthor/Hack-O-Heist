@@ -21,7 +21,6 @@ router.get("/EditEmployee", (req, res, next) => {
 })
 router.get("/:DoctorId", IsLoggedIn, catchAsync(async(req, res) => {
     const Doctor = await DoctorSchema.findById(req.params.DoctorId).populate('Department').populate('Patients').populate('Images');
-    console.log(Doctor.Images.Url);
     res.render("Doctor/Doctor", { Doctor })
 
 }))
