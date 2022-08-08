@@ -30,12 +30,10 @@ const seedDB = async() => {
             Username: `${Data[random1000].Username}`,
             HOD: `${Data[random1000].Username}`,
             Email: `${Data[random1000].Email}`,
-            Images: [{
-                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1658058996/YelpCamp/doctor-career-information-526008-edit-6d1c0fe2c1ea46fd801f8a8f804763ab_jekhbm.jpg',
-                FileName: 'YelpCamp/evwwpnpimhkzxetbwh9r'
-                
-                
-            }],
+            Images: {
+                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1659965605/HospitalManagement/doctor-career-information-526008-edit-6d1c0fe2c1ea46fd801f8a8f804763ab_jekhbm_s2qxwb.jpg',
+                FileName: 'HospitalManagement/doctor-career-information-526008-edit-6d1c0fe2c1ea46fd801f8a8f804763ab_jekhbm_s2qxwb.jpg'
+            },
             PhoneNumber: `${Data[random1000].PhoneNumber}`,
             DepartmentDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.   ",
         });

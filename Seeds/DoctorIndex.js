@@ -30,10 +30,10 @@ const seedDB = async() => {
             LastName: `${Data[random1000].LastName}`,
             DepartmentName: `${Dept[random1000%5].DepartmentName}`,
             JobTitle: 'Resident',
-            Images: [{
-                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1658058996/YelpCamp/doctor-career-information-526008-edit-6d1c0fe2c1ea46fd801f8a8f804763ab_jekhbm.jpg',
-                FileName: 'YelpCamp/evwwpnpimhkzxetbwh9r'
-                   }],
+            Images: {
+                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1659965604/HospitalManagement/download_enncgl.jpg',
+                FileName: 'HospitalManagement/download_enncgl.jpg'
+            },
             PhoneNumber: `${Data[random1000].PhoneNumber}`,
             Email: `${Data[random1000].Email}`,
             Gender: 'Male',

@@ -22,7 +22,7 @@ const DoctorSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    Images: [ImageSchema],
+    Images: ImageSchema,
 
     Department: {
         type: Schema.Types.ObjectId,

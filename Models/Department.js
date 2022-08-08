@@ -16,7 +16,7 @@ const DepartmentSchema = new Schema({
     HOD: String,
     Username: String,
     DepartmentDetails: String,
-    Images: [ImageSchema],
+    Images: ImageSchema,
     DepartmentDetails: String,
     Doctors: [{
         type: Schema.Types.ObjectId,

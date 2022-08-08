@@ -16,7 +16,7 @@ const PatientSchema = new Schema({
     DOB: Number,
     PhoneNumber: Number,
     Gender: String,
-    Images: [ImageSchema],
+    Images: ImageSchema,
     Documents: [ImageSchema],
     Doctor: {
         type: Schema.Types.ObjectId,

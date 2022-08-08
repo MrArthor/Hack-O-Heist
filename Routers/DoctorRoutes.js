@@ -15,7 +15,7 @@ router.get("/", IsLoggedIn, catchAsync(async(req, res, next) => {
 router.get("/AddPatient", IsLoggedIn, catchAsync(async(req, res) => {
     res.render("Doctor/AddPatient");
 }))
-router.get("/EditEmployee", IsLoggedIn, (req, res, next) => {
+router.get("/EditEmployee", (req, res, next) => {
 
     res.render("Doctor/EditEmployee")
 })

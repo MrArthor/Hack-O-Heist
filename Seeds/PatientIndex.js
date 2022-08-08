@@ -30,14 +30,14 @@ const seedDB = async() => {
         const Patients = new Patient({
             FirstName: `${Data[random1000].FirstName}`,
             LastName: `${Data[random1000].LastName}`,
-            Images: [{
-                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1658058996/YelpCamp/doctor-career-information-526008-edit-6d1c0fe2c1ea46fd801f8a8f804763ab_jekhbm.jpg',
-                FileName: 'YelpCamp/evwwpnpimhkzxetbwh9r'
-                 }],
+            Images: {
+                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1659966046/HospitalManagement/iStock_UnderstandingPatientDataLaunchesToday_201704006_1200x1200_taaomo.png',
+                FileName: 'HospitalManagement/iStock_UnderstandingPatientDataLaunchesToday_201704006_1200x1200_taaomo.png'
+            },
             Documents: [{
-                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1658058996/YelpCamp/doctor-career-information-526008-edit-6d1c0fe2c1ea46fd801f8a8f804763ab_jekhbm.jpg',
-                FileName: 'YelpCamp/evwwpnpimhkzxetbwh9r'
-                }],
+                Url: 'https://res.cloudinary.com/mrarthor/image/upload/v1659965124/HospitalManagement/fgqcewar5rmutjg5wdvj.png',
+                FileName: 'HospitalManagement/fgqcewar5rmutjg5wdvj.png'
+            }],
             Doctor: `${Doc[random100]._id}`
 
         });
