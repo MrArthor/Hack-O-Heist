@@ -1,5 +1,4 @@
 <% layout('layouts/BoilerPlate')%>
-
     <h1 class="text-center">
         Patient Details
     </h1>
@@ -13,7 +12,6 @@
                             <%=Patient.LastName %>
                     </h5>
                     <ul class="list-group list-group">
-
                         </li>
                         <li class="list-group-item ">
                             Date Of Birth
@@ -38,9 +36,8 @@
                         </li>
                     </ul>
                     <div class="card-body ">
-                        <!-- /Departments/:Department/Patient/:DocId/Patient -->
                         <a href="/Departments/<%=Patient.Doctor.Department._id%>/Doctor/<%=Patient.Doctor._id%>/Patient/<%=Patient._id %>/AddFiles" class="card-link btn btn-info">Images</a>
-                        <a href="/Departments" class="card-link btn btn-dark ">All Employee</a>
+
                         <form class="card-link d-inline " action="/ " method="POST ">
                             <button class="btn btn-danger ">Delete</button>
                         </form>
@@ -49,10 +46,6 @@
 
             </div>
         </div>
-
-
-
-
         <% for(let Document of Patient.Documents){ %>
 
             <div class="col-6  card my-2">
