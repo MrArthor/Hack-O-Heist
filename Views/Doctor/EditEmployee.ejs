@@ -1,0 +1,92 @@
+<% layout('layouts/BoilerPlate')%>
+    <h1 class="text-center">
+        Edit Employee Details </h1>
+    <div class="col-6 offset-md-3">
+        <form class="needs-validation" novalidate>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="">
+                        <label for="validationCustom01">Profile Photo</label>
+                        <input type="file" class="form-control" id="validationCustom01" placeholder="First name" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Trueduo" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Job Title</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Resident" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Date Of Birth</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="DDMMYYYY" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Contact Number</label>
+                        <input type="number" class="form-control" id="validationCustom01" placeholder="First name" value="+9198876543210" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Email <Address></Address></label>
+                        <input type="email" class="form-control" id="validationCustom01" placeholder="First name" value="Mark@Trueduo.com" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Gender</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Male/Female" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <label for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check my-2">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">                  Agree to terms and conditions
+                </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>

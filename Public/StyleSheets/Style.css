@@ -1,0 +1,45 @@
+body {
+    background-color: #035397;
+    color: #C9D8B6;
+}
+
+.imageLogin {
+    height: 40vh;
+    width: 100%;
+}
+
+.card {
+    color: #96BAFF;
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+input {
+    background-color: black;
+}
+
+a.link {
+    color: white;
+}
+
+.DocumentImage {
+    height: 100%;
+    width: 100%
+}
+
+.NavBar {
+    background-color: #5089C6;
+}
+
+.nav-link,
+.navbar-brand,
+card-link {
+    color: White;
+}
+
+.DepartmentImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}

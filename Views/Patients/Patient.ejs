@@ -1,0 +1,80 @@
+<% layout('layouts/BoilerPlate')%>
+
+    <h1 class="text-center">
+        Patient Details
+    </h1>
+    <div class="row">
+        <div class="col-6 ">
+            <div class="card">
+                <img class="card-img-top img-thumbnail" src="<%=Patient.Images[0].Url%>" alt="<%=Patient.Images[0].FileName%>">
+                <div class="card-body ">
+                    <h5 class="card-header ">
+                        <%=Patient.FirstName %>
+                            <%=Patient.LastName %>
+                    </h5>
+                    <ul class="list-group list-group">
+
+                        </li>
+                        <li class="list-group-item ">
+                            Date Of Birth
+                            <%=Patient.DOB %>
+                        </li>
+                        <li class="list-group-item ">
+                            Gender
+                            <%=Patient.Gender %>
+                        </li>
+                        <li class="list-group-item ">
+                            Phone Number
+                            <%=Patient.PhoneNumber %>
+                        </li>
+                        <li class="list-group-item ">
+                            Department
+                            <%=Patient.DepartmentName %>
+                        </li>
+                        <li class="list-group-item ">
+                            Doctor Assignemt
+                            <%=Patient.Doctor.FirstName %>
+                                <%=Patient.Doctor.LastName  %>
+                        </li>
+                    </ul>
+                    <div class="card-body ">
+                        <!-- /Departments/:Department/Patient/:DocId/Patient -->
+                        <a href="/Departments/<%=Patient.Doctor.Department._id%>/Doctor/<%=Patient.Doctor._id%>/Patient/<%=Patient._id %>/AddFiles" class="card-link btn btn-info">Images</a>
+                        <a href="/Departments" class="card-link btn btn-dark ">All Employee</a>
+                        <form class="card-link d-inline " action="/ " method="POST ">
+                            <button class="btn btn-danger ">Delete</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <% for(let Document of Patient.Documents){ %>
+
+            <div class="col-6  card my-2">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Patient Report(s)</h2>
+                    <div class="row">
+                        <a href="<%=Document.Url %>" class="card-link">
+                    <img src="<%=Document.Url %>" alt="<%=Document.FileName %>" class="DocumentImage"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    <div class="row">
+        <div class="col-8 card offset-md-2">
+            <div class="card-body">
+                <h2 class="card-title text-center">Feedbacks</h2>
+                <form action="<%=Patient._id%>/Feedback" method="post">
+                    <textarea class="form-control" name="Review" placeholder="Type Feedbacks here" id="floatingTextarea"></textarea>
+                    <button type="submit" class="mt-2 btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>

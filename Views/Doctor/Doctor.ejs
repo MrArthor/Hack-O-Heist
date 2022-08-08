@@ -1,0 +1,79 @@
+<% layout('layouts/BoilerPlate')%>
+
+    <h1 class="text-center">
+        Doctor Portal
+    </h1>
+    <div class="row">
+        <div class="col-6 my-2 offset-md-3">
+            <div class="card">
+                <img class="card-img-top img-thumbnail" src="<%=Doctor.Images[0].Url%>" alt="<%=" " %> ">
+                <div class="card-body ">
+                    <h5 class="card-header ">
+                        <%=Doctor.FirstName %>
+                            <%=Doctor.LastName %>
+                    </h5>
+                    <ul class="list-group list-group">
+
+                        </li>
+                        <li class="list-group-item ">Name Of Department
+                            <%=Doctor.Department.DepartmentName %>
+                        </li>
+                        <li class="list-group-item ">Position Of Doctor
+                            <%=Doctor.JobTitle %>
+                        </li>
+                        <li class="list-group-item ">
+                            Email Address:
+                            <%=Doctor.Email %>
+                        </li>
+                        <li class="list-group-item ">
+                            Contact Number
+                            <%=Doctor.PhoneNumber %>
+                        </li>
+                        <li class="list-group-item ">
+                            UserName
+                            <%=Doctor.username %>
+                        </li>
+                    </ul>
+                    <div class="card-body ">
+                        <!-- /Departments/:Department/Doctor/:DocId/Patient -->
+                        <a href="/Departments/<%=Doctor.Department._id%>/Doctor/<%=Doctor._id%>/Patient/" class="card-link btn btn-info">Add Patients</a>
+                        <a href="/Departments" class="card-link btn btn-dark ">All Employee</a>
+                        <form class="card-link d-inline " action="/ " method="POST ">
+                            <button class="btn btn-danger ">Delete</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <% for(let Patient of Doctor.Patients){ %>
+            <div class="col-10 mx-auto my-2">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" alt="" src="<%=Patient.Images[0].Url%>" class="" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title"> Patient's Name
+                                    <%=Patient.FirstName %>
+                                        <%=Patient.LastName %>
+                                            </h2>
+                                            <h4 class="card-text">
+                                                Job Title
+
+                                            </h4>
+                                            <h4 class="card-text">
+                                                Contact Number
+                                                <%=Patient.PhoneNumber %>
+                                            </h4>
+                                            <a href="/Departments/<%=Doctor.Department._id%>/Doctor/<%=Doctor._id%>/Patient/<%=Patient._id%> " class="card-link">
+                                                <div class="btn btn-dark  ">Open Patient Profile</div>
+                                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>

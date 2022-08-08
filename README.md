@@ -1,2 +1,2 @@
-# Hack O Heist
+# DUHacks Project
  

@@ -1,0 +1,38 @@
+<% layout('layouts/BoilerPlate')%>
+    <h1 class="text-center"> Deparment Page </h1>
+
+    <div class="col-10 mx-auto offset-md-3">
+        <p>
+            <% for (let Department of Departments){%>
+                <div class="card  mb-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid DepartmentImage" alt="<%=Department.Images[0].FileName%>" src="<%=Department.Images[0].Url%>" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Department Name
+                                    <%= Department.DepartmentName %>
+                                </h5>
+                                <p class="card-text">
+                                    Name Of Head Of Department
+                                    <%= Department.HOD %>
+                                </p>
+                                <p class="card-text">
+                                    Contact Number
+                                    <%= Department.PhoneNumber %>
+                                </p>
+                                <p class="card-text">
+                                    <%= Department.DepartmentDetails %>
+                                </p>
+
+                                <a class="btn btn-primary" href="/Departments/<%=Department._id%>">View <%=Department.title%></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>
+
+        </p>
+    </div>

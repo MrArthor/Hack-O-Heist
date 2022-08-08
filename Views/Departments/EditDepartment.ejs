@@ -1,0 +1,73 @@
+<% layout('layouts/BoilerPlate')%>
+    <h1 class="text-center"> Edit Department </h1>
+    <div class="col-6 offset-md-3">
+
+        <form class="needs-validation" action="/Departments/<%=Departments._id %>/EditDepartment?_method=PUT" method="POST" novalidate>
+            <div class="form-group ">
+                <div class="form-row ">
+                    <div class=" ">
+                        <label for="validationCustom01 "> Department Name</label>
+                        <input value="<%=Departments.DepartmentName %>" type="text" class="form-control" id="validationCustom01" name="EditDepartment[DepartmentName]" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <label for="validationCustom01">Contact Number</label>
+                        <input type="number" class="form-control" value="<%=Departments.PhoneNumber %>" id="validationCustom01" name='EditDepartment[PhoneNumber]' required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Email <Address></Address></label>
+                        <input type="email" class="form-control" id="validationCustom01" value="<%=Departments.Email %>" name='EditDepartment[Email]' required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Name Of Head Of Department</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="<%=Departments.HOD %>" name='EditDepartment[HOD]' required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="validationCustom01">Department Details</label>
+                        <textarea type="text" class="form-control" id="validationCustom01" name='EditDepartment[DepartmentDetails]' required><%=Departments.DepartmentDetails %></textarea>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <label for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" value="<%=Departments.Username %>" name='EditDepartment[Username]' id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback ">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check my-2">
+                        <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                        <label class="form-check-label " for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>

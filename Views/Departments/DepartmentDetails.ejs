@@ -1,0 +1,63 @@
+<% layout('layouts/BoilerPlate')%>
+    <h1 class="text-center"> Deparment Portal </h1>
+
+    <div class="col-10 mx-auto my-5">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center">
+                    <%=Departments.DepartmentName %>
+                </h2>
+                <h4 class="card-text">
+                    About Department
+                    <%= Departments.DepartmentDetails %>
+                </h4>
+                <h4 class="card-text">
+                    Head Of Department
+                    <%=Departments.HOD %>
+                </h4>
+                <h4 class="card-text">
+                    Head Of Department
+                </h4>
+
+                <a href="/Departments/<%=Departments._id  %>/AddEmployee" class="card-link">
+                    <span class="btn btn-primary"> Add Employee </span>
+                </a>
+                <a href="/Departments/<%=Departments._id  %>/EditDepartment" class="card-link">
+                    <span class="btn btn-danger"> Edit Department</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <% for(let Doctor of Departments.Doctors){ %>
+        <div class="col-10 mx-auto my-3">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid DepartmentImage" alt="<%=Doctor.Images[0].FileName%>" src="<%=Doctor.Images[0].Url%>" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="text-center card-title"> Doctor's Name
+
+                                <%=Doctor.FirstName%>
+                            </h2>
+                            <h4 class="card-text">
+                                Job Title
+                                <%=Doctor.JobTitle%>
+                            </h4>
+                            <h4 class="card-text">
+                                Contact Number
+                                <%=Doctor.PhoneNumber%>
+                            </h4>
+                            <a href="/Departments/<%=Departments._id  %>/Doctor/<%=Doctor._id %>" class="card-link">
+                                <div class="btn btn-dark"> Open Doctor Profile</div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+            </div>

@@ -1,0 +1,13 @@
+<% layout('layouts/BoilerPlate')%>
+    <div class="row">
+        <h1 class="text-center">Add Documents</h1>
+
+        <div class="col-6 offset-md-3">
+            <form action="/Departments/<%=Patient.Doctor.Department._id%>/Doctor/<%=Patient.Doctor._id %>/Patient/<%=Patient._id%>/AddFiles?_method=PUT" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile" name="Images" multiple>
+                </div>
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </div>

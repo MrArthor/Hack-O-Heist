@@ -1,0 +1,6 @@
+Things Left
+
+1.Error Handling
+2.Validations
+3. CSS
+4. Posting It
